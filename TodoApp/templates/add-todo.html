@@ -1,33 +1,43 @@
 {% include 'layout.html' %}
 
-<div class="container">
-  <div class="card">
-    <div class="card-header">
-      Make a new todo
+<main class="page page--narrow">
+
+  <header class="page-header">
+    <div>
+      <h1 class="page-title">New task</h1>
+      <p class="page-subtitle">Capture the details and we'll add it to your list.</p>
     </div>
-    <div class="card-body">
-      <form id="todoForm">
-        <div class="form-group">
-          <label>Title</label>
-          <input type="text" class="form-control" name="title" required>
-        </div>
-        <div class="form-group">
-          <label>Description</label>
-          <textarea class="form-control" rows="3" name="description" required></textarea>
-        </div>
-        <div class="form-group">
-          <label>Priority</label>
-          <select class="form-control" name="priority">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-        <button type="submit" class="btn btn-primary"> Add new todo </button>
-        <a href="/todos/todo-page" class="btn btn-success">Back</a>
-      </form>
-    </div>
-  </div>
-</div>
+  </header>
+
+  <section class="surface surface__pad-lg">
+    <form id="todoForm" class="form" autocomplete="off">
+      <div class="field">
+        <label class="field__label" for="addTitle">Title</label>
+        <input id="addTitle" class="input" type="text" name="title" placeholder="e.g. Draft Q3 retrospective" required minlength="3">
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="addDescription">Description</label>
+        <textarea id="addDescription" class="textarea" name="description" rows="3" placeholder="Add a few notes (optional)" maxlength="100"></textarea>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="addPriority">Priority</label>
+        <select id="addPriority" name="priority" data-pretty data-color-prefix="p-color-">
+          <option value="1">P1 · Low</option>
+          <option value="2">P2</option>
+          <option value="3" selected>P3 · Normal</option>
+          <option value="4">P4</option>
+          <option value="5">P5 · Urgent</option>
+        </select>
+      </div>
+
+      <div class="form-actions">
+        <a href="/todos/todo-page" class="btn btn--ghost">Cancel</a>
+        <span class="spacer"></span>
+        <button type="submit" class="btn btn--primary">Create task</button>
+      </div>
+    </form>
+  </section>
+
+</main>

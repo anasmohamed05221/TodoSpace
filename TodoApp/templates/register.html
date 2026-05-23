@@ -1,63 +1,64 @@
 {% include 'layout.html' %}
 
-
-<div class="container">
-  <div class="card">
-    <div class="card-header">
-      Register
+<main class="auth-wrap">
+  <div class="auth-card auth-card--wide">
+    <div class="auth-head">
+      <h1 class="auth-head__title">Create your account</h1>
+      <p class="auth-head__subtitle">It only takes a minute.</p>
     </div>
-    <div class="card-body">
-      <form id="registerForm">
+
+    <section class="surface surface__pad-lg">
+      <form id="registerForm" class="form">
         <div class="form-row">
-          <div class="form-group col-md-6">
-            <label>Email</label>
-            <input type="text" class="form-control" name="email" required>
+          <div class="field">
+            <label class="field__label" for="regEmail">Email</label>
+            <input id="regEmail" class="input" type="email" name="email" autocomplete="email" required>
           </div>
-          <div class="form-group col-md-6">
-            <label>Username</label>
-            <input type="text" class="form-control" name="username" required>
+          <div class="field">
+            <label class="field__label" for="regUsername">Username</label>
+            <input id="regUsername" class="input" type="text" name="username" autocomplete="username" required>
           </div>
         </div>
+
         <div class="form-row">
-          <div class="form-group col-md-6">
-            <label>First Name</label>
-            <input type="text" class="form-control" name="firstname" required>
+          <div class="field">
+            <label class="field__label" for="regFirst">First name</label>
+            <input id="regFirst" class="input" type="text" name="firstname" autocomplete="given-name" required>
           </div>
-          <div class="form-group col-md-6">
-            <label>Last Name</label>
-            <input type="text" class="form-control" name="lastname" required>
+          <div class="field">
+            <label class="field__label" for="regLast">Last name</label>
+            <input id="regLast" class="input" type="text" name="lastname" autocomplete="family-name" required>
           </div>
         </div>
+
         <div class="form-row">
-          <div class="form-group col-md-6">
-            <label>Role</label>
-            <input type="text" class="form-control" name="role" required>
+          <div class="field">
+            <label class="field__label" for="regRole">Role</label>
+            <input id="regRole" class="input" type="text" name="role" placeholder="e.g. user" required>
           </div>
-          <div class="form-group col-md-6">
-            <label>Phone Number</label>
-            <input type="text" class="form-control" name="phone_number" autocomplete="phone_number" required>
+          <div class="field">
+            <label class="field__label" for="regPhone">Phone number</label>
+            <input id="regPhone" class="input" type="tel" name="phone_number" autocomplete="tel" required>
           </div>
         </div>
-        <div class="form-group">
-          <label>Password</label>
-          <input type="password" class="form-control" name="password" autocomplete="new-password" required>
+
+        <div class="form-row">
+          <div class="field">
+            <label class="field__label" for="regPassword">Password</label>
+            <input id="regPassword" class="input" type="password" name="password" autocomplete="new-password" required>
+          </div>
+          <div class="field">
+            <label class="field__label" for="regPassword2">Verify password</label>
+            <input id="regPassword2" class="input" type="password" name="password2" autocomplete="new-password" required>
+          </div>
         </div>
-        <div class="form-group">
-          <label>Verify Password</label>
-          <input type="password" class="form-control" name="password2" autocomplete="new-password" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Sign in</button>
+
+        <button type="submit" class="btn btn--primary btn--block">Create account</button>
       </form>
-    </div>
-    <div class="card-footer text-muted">
-      <a href="/auth/login-page">Already have an account?</a>
-    </div>
+    </section>
+
+    <p class="auth-foot">
+      Already have an account? <a href="/auth/login-page">Sign in</a>
+    </p>
   </div>
-</div>
-
-
-
-
-
-
-
+</main>

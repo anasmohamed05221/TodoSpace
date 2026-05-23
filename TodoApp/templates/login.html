@@ -1,26 +1,28 @@
 {% include 'layout.html' %}
 
-
-<div class="container">
-    <div class="card">
-        <div class="card-header">
-            Login
-        </div>
-        <div class="card-body">
-            <form id="loginForm">
-                <div class="form-group">
-                    <label>Username</label>
-                    <input type="text" class="form-control" name="username" autocomplete="username" required>
-                </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" class="form-control" name="password" autocomplete="current-password" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Login</button>
-            </form>
-        </div>
-        <div class="card-footer text-muted">
-            <a href="/auth/register-page"> Register? </a>
-        </div>
+<main class="auth-wrap">
+  <div class="auth-card">
+    <div class="auth-head">
+      <h1 class="auth-head__title">Welcome back</h1>
+      <p class="auth-head__subtitle">Sign in to manage your tasks.</p>
     </div>
-</div>
+
+    <section class="surface surface__pad-lg">
+      <form id="loginForm" class="form">
+        <div class="field">
+          <label class="field__label" for="loginUsername">Username</label>
+          <input id="loginUsername" class="input" type="text" name="username" autocomplete="username" required>
+        </div>
+        <div class="field">
+          <label class="field__label" for="loginPassword">Password</label>
+          <input id="loginPassword" class="input" type="password" name="password" autocomplete="current-password" required>
+        </div>
+        <button type="submit" class="btn btn--primary btn--block">Sign in</button>
+      </form>
+    </section>
+
+    <p class="auth-foot">
+      New here? <a href="/auth/register-page">Create an account</a>
+    </p>
+  </div>
+</main>
