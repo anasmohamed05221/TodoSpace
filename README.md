@@ -1,4 +1,4 @@
-***📝 TodoApp – FastAPI Fullstack Application***
+***📝 TodoSpace – FastAPI Fullstack Application***
 
 Live Demo: [(https://anass-todoapp-fastapi.onrender.com)]
 Tech Stack: Python, FastAPI, SQLAlchemy, Pydantic v2, PostgreSQL/SQLite, Jinja2, bootstrap js/css, Pytest, Alembic, Git
