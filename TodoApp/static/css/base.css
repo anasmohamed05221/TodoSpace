@@ -422,7 +422,8 @@ body {
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.14);
 }
 .quick-add__input {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
   border: 0;
   background: transparent;
   padding: 8px 10px;
@@ -705,10 +706,17 @@ body {
   .page-header { margin-bottom: 20px; }
   .surface__pad-lg { padding: 20px; }
 
-  /* Quick-add: shorten priority labels so input gets room */
+  /* Quick-add: shrink everything so the row stays inside the viewport */
   .quick-add { padding: 6px; gap: 4px; }
   .quick-add__input { font-size: 16px; padding: 8px; } /* 16px prevents iOS zoom */
   .quick-add__priority { padding: 6px 4px; font-size: 0.8rem; }
+  .pretty-select--inline .pretty-select__trigger {
+    padding: 5px 6px;
+    font-size: 0.78rem;
+    gap: 4px;
+  }
+  .pretty-select--inline .pretty-select__chevron { width: 11px; height: 11px; }
+  .pretty-select--inline .pretty-select__trigger .pretty-select__opt-dot { width: 6px; height: 6px; }
 
   /* Filter tabs: hide count pills on narrow screens to avoid wrap */
   .count-pill { display: none; }
